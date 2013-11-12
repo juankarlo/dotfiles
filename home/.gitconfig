@@ -1,0 +1,45 @@
+[user]
+	name = Juan C. Nieves
+	email = juanc.nieves@gmail.com
+	username = juankarlo	
+[credential]
+	helper = cache --timeout=3600
+[color]
+	status = auto
+  	diff = auto
+  	branch = auto
+  	remote = auto
+  	log = auto
+  	ui = true
+	interactive = auto
+[alias]
+	i = init
+	st= status
+	s = status -sb
+	d = diff
+	dc = diff --color-words
+	ds = diff --staged
+	co = checkout
+	cb = checkout -b
+	r = reset
+	a = add
+	all = add .	
+	p = add -p
+	l = log --graph --abbrev-commit --date=relative
+	lg = log --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	la = log --graph --abbrev-commit --date=relative --all
+	lp = log -p
+	c = commit
+	cm = commit -m
+	#lg = log --graph --date=relative #--pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'     
+#[format]
+  	# pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
+ 	# pretty=format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[branch]
+  autosetuprebase = always
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	pager = less -+S
+[merge]
+	tool = vimdiff

@@ -1,0 +1,76 @@
+# echo -n 'Uptime: '; uptime
+
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source $GITAWAREPROMPT/main.sh
+
+function parse_git_branch() {
+      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+#function parse_git_branch() {
+ #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+#}
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+
+#export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ " 
+export PS1="\[$bldgrn\]\[$bldblu\] \W \[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$txtrst\]\$ \[$txtylw\]" 
+export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \W\$ "
+
+#export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \W $ \[\033[00m\]'
+
+#PS1='{debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]'
+
+  
+#### ADD customization of the History
+export HISTSIZE=100000
+export HISTFILESIZE=1000000
+export HISTTIMEFORMAT='%b %d %I:%M %p'
+# export HISTTIMEFORMAT='%b %d '
+export HISTCONTROL=ignoredups:erasedups
+export HISTIGNORE="history:h:pwd:e:exit:df:du:ls:ls -la:ll:c:clear:tmux:t:r:re:rvm:npm"
+# append history entries..
+shopt -s histappend
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+source ~/.nvm/nvm.sh
+
+# Alias
+alias re="clear; source ~/.bashrc" 
+alias e='exit'
+alias c='clear'
+alias h='history'
+alias ll='clear; ls -lahG --color=auto'
+alias up='clear; cd ..'
+alias home='clear; cd ~'
+alias t='tmux'
+export alias less='less -S'
+# alias grep='grep -i'
+alias r=rails
+alias rn='rails new'
+alias rg='rails g'
+alias rc='rails console'
+alias ys='yard server --gems'
+alias rspec="clear; rspec"
+alias git=hub
+alias g=git
+alias v=vim
+alias s=sublime
+alias be='bundle exec'
+alias guard='be guard'
+alias prys='pry --simple-prompt'
+alias irbs='irb --simple-prompt'
+
+# Commands redefinitions 
+alias mv='mv -i'
+alias cp='cp -i'
+#alias rm='rm -R-i'
+alias df='df -h'
+alias du='du -h'
+alias mkdir='mkdir -p'
+alias open='gnome-open'
