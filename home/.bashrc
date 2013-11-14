@@ -13,10 +13,9 @@ function parse_git_branch() {
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-
-
 #export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ " 
-export PS1="\[$bldgrn\]\[$bldblu\] \W \[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$txtrst\]\$ \[$txtylw\]" 
+export PS1=" ∆\[$bldgrn\]\[$bldblu\] \W \[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$txtrst\] » \[$txtylw\]" 
+# export PS1="\[$bldgrn\]\[$bldblu\] \W \[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$txtrst\]\$ \[$txtylw\]" 
 export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \W\$ "
 
 #export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \W $ \[\033[00m\]'
@@ -27,7 +26,7 @@ export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \W\$ "
 #### ADD customization of the History
 export HISTSIZE=100000
 export HISTFILESIZE=1000000
-export HISTTIMEFORMAT='%b %d %I:%M %p'
+export HISTTIMEFORMAT='%b %d %I:%M %p '
 # export HISTTIMEFORMAT='%b %d '
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE="history:h:pwd:e:exit:df:du:ls:ls -la:ll:c:clear:tmux:t:r:re:rvm:npm"
@@ -36,10 +35,10 @@ shopt -s histappend
 # After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.nvm/nvm.sh
-
+source ~/.git-completion.bash
 # Alias
 alias re="clear; source ~/.bashrc" 
 alias e='exit'
@@ -74,3 +73,5 @@ alias df='df -h'
 alias du='du -h'
 alias mkdir='mkdir -p'
 alias open='gnome-open'
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
