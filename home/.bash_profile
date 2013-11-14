@@ -1,11 +1,11 @@
 # echo -n "Welcome, "; whoami
-
+source ~/.profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # startup virtualenv-burrito
-if [ -f ~/.venvburrito/startup.sh ]; then
-    . ~/.venvburrito/startup.sh
-fi
+# if [ -f ~/.venvburrito/startup.sh ]; then
+#     . ~/.venvburrito/startup.sh
+# fi
 
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash

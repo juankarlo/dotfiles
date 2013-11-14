@@ -10,3 +10,6 @@ execute pathogen#infect()
 
 map <C-n> :NERDTreeToggle<CR>
 
+syntax enable
+set background=dark
+colorscheme solarized
