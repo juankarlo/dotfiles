@@ -1,4 +1,7 @@
 # echo -n 'Uptime: '; uptime
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
@@ -74,4 +77,4 @@ alias du='du -h'
 alias mkdir='mkdir -p'
 alias open='gnome-open'
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
