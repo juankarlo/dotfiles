@@ -18,8 +18,8 @@ function parse_git_branch() {
       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ " 
 export PS1=" ∆\[$bldgrn\]\[$bldblu\] \W \[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$txtrst\] » \[$txtylw\]" 
@@ -85,5 +85,3 @@ alias df='df -h'
 alias du='du -h'
 alias mkdir='mkdir -p'
 alias open='gnome-open'
-
-
