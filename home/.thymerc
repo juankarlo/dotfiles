@@ -1,0 +1,5 @@
+set :tmux, true
+
+after do |seconds_left|
+`notify-send -u critical "Thyme's up!"`
+end

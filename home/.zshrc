@@ -46,7 +46,9 @@ ZSH_THEME="juankarlo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(profiles systemadmin taskwarior sudo history screen sprunge rand-quote lol web-search themes tmux tmuxinator terminator ruby rvm rails zeus thor rbfu git git-extras gitfast gitignore nvm node npm coffee redis-cli colorize common-aliases cp debian dirpersist extract heroku last-working-dir per-directory-history nyan perl pip postgres rsync wd )
+plugins=( coffee colorize common-aliases cp debian extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus
+)
+# tmux tmuxinator
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,13 +61,22 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/home/juankarlo/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
 # Path for RVM and NVM
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source ~/.nvm/nvm.sh
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 
-
+## Oengit function load
+source ~/.opengit/opengit.sh
+fpath=(~/.zsh-completions/src $fpath)
+# source ~/.git-completion.zsh
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -93,7 +104,7 @@ REPORTTIME=10
 
 # Aliases Juankarlo
 alias c="clear"
-alias re=". ~/.zshrc"
+alias re=". ~/.zshrc; clear"
 alias e='exit'
 alias h='history'
 alias hg='h | grep'
@@ -101,9 +112,9 @@ alias ag='alias | grep'
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
-alias gh='hub'
+alias open='gnome-open'
 
-# alias tm='tmux'
+alias tm='tmux'
 
 # List direcory contents
 
@@ -123,16 +134,31 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
+# RVM
+alias gemset-default='rvm gemset use default'
+
+# Git
+alias g='git'
+alias gh='hub'
+alias gls='g log --stat'
+alias gcb='g checkout -b'
 
 # Ruby
-alias prys='pry --simple-prompt'
-alias irbs='irb --simple-prompt'
+alias pry='pry --simple-prompt'
+alias irb='irb --simple-prompt'
+# alias prys='pry --simple-prompt'
+# alias irbs='irb --simple-prompt'
 
 # Rails
+alias r='rails'
 alias ys='yard server --gems'
-alias rspec="clear; rspec"
+# alias rspec="clear; rspec"
 alias spec="clear; rspec --color --format doc"
-alias jekyll"jekyll serve"
+alias jekyllserver"jekyll serve"
+alias rdre='rake db:reset'
+
+# Node Aliases
+alias lessc='~/.nvm/v0.10.25/bin/lessc'
 
 # Bash config Alias
 

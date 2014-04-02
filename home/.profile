@@ -23,3 +23,4 @@ fi
 
 # source ~/.profile
 # EDITOR=sublime
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

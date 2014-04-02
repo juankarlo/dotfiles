@@ -43,3 +43,8 @@
 	pager = less -+S
 [merge]
 	tool = vimdiff
+[gui]
+	recentrepo = /home/juankarlo/Dev/RubymineProjects/Rails/Tutorials/rails_projects/sample_app
+
+[url "https://"]
+	insteadOf = git://

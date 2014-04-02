@@ -23,8 +23,9 @@
 
 # PROMPT='%{$fg[magenta]%}[%c] %{$reset_color%}'
 # PROMPT='☠ %{$fg[magenta]%}  (%c) ➜ % %{$reset_color%}'
-PROMPT='%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%} %{$fg_bold[cyan]%}%{(%c)%} %{$reset_color%} %{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
-%{$fg_bold[yellow]%} ☢  %{$reset_color%}'
+PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}%{$fg_bold[magenta]%}] %{$reset_color%}%{$fg_bold[cyan]%}%{(%c) %} %{$reset_color%} %{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
+%{$fg_bold[yellow]%} ☣  %{$reset_color%}'
+# ☢
 # The right-hand prompt
 
 # RPROMPT='${time} %{$fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%}'
@@ -42,7 +43,7 @@ time="%(?.%F{green}%D{%L:%M} %F{yellow}%D{%p}%f.%F{red}%D{%L:%M} %F{yellow}%D{%p
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ☁  %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ☂" # Ⓓ
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ☔" # Ⓓ☂
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭" # ⓣ
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ☀" # Ⓞ
 
@@ -54,7 +55,7 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ♒" # ⓤ ⑊
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} 𝝙"
 
 # More symbols to choose from:
-# ☀ ✹ ☄ ♆ ♀ ♁ ♐ ♇ ♈ ♉ ♚ ♛ ♜ ♝ ♞ ♟ ♠ ♣ ⚢ ⚲ ⚳ ⚴ ⚥ ⚤ ⚦ ⚒ ⚑ ⚐ ♺ ♻ ♼ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷
+# ☔ ☂ ☀ ✹ ☄ ♆ ♀ ♁ ♐ ♇ ♈ ♉ ♚ ♛ ♜ ♝ ♞ ♟ ♠ ♣ ⚢ ⚲ ⚳ ⚴ ⚥ ⚤ ⚦ ⚒ ⚑ ⚐ ♺ ♻ ♼ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷
 # ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠ 
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ
 # ☠
