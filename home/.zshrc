@@ -139,6 +139,7 @@ alias gemset-default='rvm gemset use default'
 
 # Git
 alias g='git'
+# alias g='hub'
 alias gh='hub'
 alias gls='g log --stat'
 alias gcb='g checkout -b'

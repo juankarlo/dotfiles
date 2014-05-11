@@ -23,11 +23,11 @@
 
 # PROMPT='%{$fg[magenta]%}[%c] %{$reset_color%}'
 # PROMPT='☠ %{$fg[magenta]%}  (%c) ➜ % %{$reset_color%}'
-PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}%{$fg_bold[magenta]%}] %{$reset_color%}%{$fg_bold[cyan]%}%{(%c) %} %{$reset_color%} %{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
-%{$fg_bold[yellow]%} ☣  %{$reset_color%}'
+PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}%{$fg_bold[magenta]%}] %{$reset_color%}%{$fg_bold[magenta]%}[%{$reset_color%}%{$fg_bold[cyan]%}%{%c%}%{$fg_bold[magenta]%}] %{$reset_color%} %{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
+%{$fg_bold[yellow]%} ☢  %{$reset_color%}'
 # ☢
 # The right-hand prompt
-
+# RPROMPT='${time}'
 # RPROMPT='${time} %{$fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%}'
 # RPROMPT='%{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} %f ${time}'
 
@@ -38,7 +38,7 @@ PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_co
 # time_enabled="%(?.%{$fg[green]%}.%{$fg[red]%})%*%{$reset_color%}"
 # time_disabled="%{%F[green]%}%*%{$reset_color%}"
 # time=$time_enabled
-time="%(?.%F{green}%D{%L:%M} %F{yellow}%D{%p}%f.%F{red}%D{%L:%M} %F{yellow}%D{%p}%f %{$reset_color%}"
+# time="%(?.%F{green}%D{%L:%M} %F{yellow}%D{%p}%f.%F{red}%D{%L:%M} %F{yellow}%D{%p}%f %{$reset_color%}"
 # time="%F{green}%D{%L:%M} %F{yellow}%D{%p}%f %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ☁  %{$fg[red]%}"
@@ -58,7 +58,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} 𝝙"
 # ☔ ☂ ☀ ✹ ☄ ♆ ♀ ♁ ♐ ♇ ♈ ♉ ♚ ♛ ♜ ♝ ♞ ♟ ♠ ♣ ⚢ ⚲ ⚳ ⚴ ⚥ ⚤ ⚦ ⚒ ⚑ ⚐ ♺ ♻ ♼ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷
 # ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠ 
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ
-# ☠
+# ☠ ☢ ☣
 
 # Determine if we are using a gemset.
 function rvm_gemset() {
