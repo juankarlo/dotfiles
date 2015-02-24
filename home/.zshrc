@@ -109,11 +109,12 @@ alias e='exit'
 alias h='history'
 alias hg='h | grep'
 alias ag='alias | grep'
-alias agi='sudo apt-get install'
-alias agr='sudo apt-get remove'
-alias agu='sudo apt-get update'
-alias open='gnome-open'
+#alias agi='sudo apt-get install'
+#alias agr='sudo apt-get remove'
+#alias agu='sudo apt-get update'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias tm='tmux'
 
 # List direcory contents
@@ -162,6 +163,8 @@ alias rdre='rake db:reset'
 alias lessc='~/.nvm/v0.10.25/bin/lessc'
 
 # Bash config Alias
+
+
 
 alias bashconfig="subl ~/.bashrc"
 
