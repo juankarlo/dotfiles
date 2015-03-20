@@ -63,6 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -70,11 +71,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source ~/.nvm/nvm.sh
-[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+#source ~/.nvm/nvm.sh
+#[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 
-## Oengit function load
-source ~/.opengit/opengit.sh
 fpath=(~/.zsh-completions/src $fpath)
 # source ~/.git-completion.zsh
 # # Preferred editor for local and remote sessions
@@ -90,7 +89,7 @@ fpath=(~/.zsh-completions/src $fpath)
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
+eval "$(grunt --completion=zsh)"
 
 
 #HISTFILE=~/.bash_history

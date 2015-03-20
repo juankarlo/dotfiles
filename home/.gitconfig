@@ -3,7 +3,7 @@
 	email = juanc.nieves@gmail.com
 	username = juankarlo	
 [credential]
-	helper = cache --timeout=3600
+	helper = cache
 [color]
 	status = auto
   	diff = auto
