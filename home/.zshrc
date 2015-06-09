@@ -61,16 +61,14 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/home/juankarlo/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
 # Path for RVM and NVM
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+#source $(brew --prefix nvm)/nvm.sh
 #source ~/.nvm/nvm.sh
 #[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 
@@ -158,9 +156,6 @@ alias spec="clear; rspec --color --format doc"
 alias jekyllserver"jekyll serve"
 alias rdre='rake db:reset'
 
-# Node Aliases
-alias lessc='~/.nvm/v0.10.25/bin/lessc'
-
 # Bash config Alias
 
 
@@ -176,4 +171,6 @@ alias hsick="homesick"
 
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
+
+
 
