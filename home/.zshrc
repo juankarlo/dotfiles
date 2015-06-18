@@ -160,17 +160,17 @@ alias rdre='rake db:reset'
 
 
 
-alias bashconfig="subl ~/.bashrc"
+alias bashconfig="mate ~/.bashrc"
 
 # Homesick config Alias
 
-alias homesickconfig="subl ~/.homesick/repos/dotfiles/home/"
+alias homesickconfig="mate ~/.homesick/repos/dotfiles/home/"
 alias hsick="homesick"
 
 # Oh-my-zsh config Alias
 
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
 
