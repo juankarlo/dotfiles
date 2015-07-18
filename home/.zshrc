@@ -46,7 +46,7 @@ ZSH_THEME="juankarlo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=( coffee colorize common-aliases cp debian extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus
+plugins=( coffee colorize common-aliases cp extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus osx brew encode64 gas nanoc
 )
 # tmux tmuxinator
 
