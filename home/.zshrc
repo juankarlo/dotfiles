@@ -91,7 +91,12 @@ eval "$(grunt --completion=zsh)"
 
 
 #HISTFILE=~/.bash_history
-HISTSIZE=SAVEHIST=100000
+HISTSIZE=200000
+SAVEHIST=100000
+#HIST_EXPIRE_DUPS_FIRST
+#HIST_FIND_NO_DUPS
+#HIST_IGNORE_DUPS
+#HIST_IGNORE_ALL_DUPS
 setopt incappendhistory
 setopt sharehistory
 setopt extendedhistory
@@ -106,9 +111,8 @@ alias e='exit'
 alias h='history'
 alias hg='h | grep'
 alias ag='alias | grep'
-#alias agi='sudo apt-get install'
-#alias agr='sudo apt-get remove'
-#alias agu='sudo apt-get update'
+alias backgems="gem list|sed 's/(//'|sed 's/)//'|awk '{print \"gem install \" \$1}' > installGems.sh"
+
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
