@@ -19,13 +19,16 @@
 
 # Thanks to Steve Losh: http://stevelosh.com/blog/2009/03/candy-colored-terminal/
 
+
+
+
 # The prompt
 
 # PROMPT='%{$fg[magenta]%}[%c] %{$reset_color%}'
 # PROMPT='☠ %{$fg[magenta]%}  (%c) ➜ % %{$reset_color%}'
-PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}%{$fg_bold[magenta]%}] %{$reset_color%}%{$fg_bold[magenta]%}[%{$reset_color%}%{$fg_bold[cyan]%}%{%c%}%{$fg_bold[magenta]%}] %{$reset_color%} %{ $fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
-%{$fg_bold[yellow]%} ☢  %{$reset_color%}'
-# ☢
+PROMPT='%{$fg_bold[magenta]%}[♦️ %{$fg[red]%}$(rvm-prompt i v g)%{$reset_color%}%{$fg_bold[magenta]%}] %{$fg_bold[red]%}[🐍 %{$fg[green]%}$(pyenv_prompt_info)%{$reset_color%}%{$fg_bold[red]%}] %{$reset_color%}%{$fg_bold[magenta]%}[%{$reset_color%}%{$fg_bold[cyan]%}%{%c%}%{$fg_bold[magenta]%}] %{$reset_color%} %{ $fg[yellow]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
+%{$fg_bold[yellow]%} ☣  %{$reset_color%}'
+# ☠☢
 # The right-hand prompt
 # RPROMPT='${time}'
 # RPROMPT='${time} %{$fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%}'
@@ -41,7 +44,7 @@ PROMPT='%{$fg_bold[magenta]%}[%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_co
 # time="%(?.%F{green}%D{%L:%M} %F{yellow}%D{%p}%f.%F{red}%D{%L:%M} %F{yellow}%D{%p}%f %{$reset_color%}"
 # time="%F{green}%D{%L:%M} %F{yellow}%D{%p}%f %{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" ☁  %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="\ue0a0 %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ☔" # Ⓓ☂
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭" # ⓣ
@@ -60,6 +63,8 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} 𝝙"
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ
 # ☠ ☢ ☣
 
+
+
 # Determine if we are using a gemset.
 function rvm_gemset() {
     GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
@@ -67,6 +72,9 @@ function rvm_gemset() {
         echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
     fi 
 }
+
+
+
 
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.

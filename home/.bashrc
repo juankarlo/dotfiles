@@ -31,7 +31,7 @@ export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \W\$ "
 #PS1='{debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]'
 
 ## Oengit function load
-source ~/.opengit/opengit.sh
+# source ~/.opengit/opengit.sh
   
 #### ADD customization of the History
 export HISTSIZE=100000

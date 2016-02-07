@@ -8,6 +8,17 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="juankarlo"
 
+
+BULLETTRAIN_RUBY_SHOW="true"
+
+BULLETTRAIN_PROMPT_CHAR="☠"
+BULLETTRAIN_TIME_SHOW="false"
+
+#Ruby
+#BULLETTRAIN_RUBY_SHOW="true"
+
+#BULLETTRAIN_VIRTUALENV_SHOW="true"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -46,21 +57,25 @@ ZSH_THEME="juankarlo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=( coffee colorize common-aliases cp extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus osx brew encode64 gas nanoc
+plugins=( coffee colorize common-aliases cp extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus osx brew encode64 gas nanoc virtualenv pyenv python
 )
 # tmux tmuxinator
 
 source $ZSH/oh-my-zsh.sh
 
+
+
+
 # User configuration
-# Old PATH
- # export PATH="/home/juankarlo/.nvm/v0.10.22/bin:/home/juankarlo/.rvm/gems/ruby-2.0.0-p353/bin:/home/juankarlo/.rvm/gems/ruby-2.0.0-p353@global/bin:/home/juankarlo/.rvm/rubies/ruby-2.0.0-p353/bin:/home/juankarlo/.rvm/bin:/home/juankarlo/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
-# export MANPATH="/usr/local/man:$MANPATH"
 
-# Default Path
-# export PATH="/home/juankarlo/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
+export PATH=/usr/local/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)"
+
+
 # Path for RVM and NVM
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -90,26 +105,29 @@ fpath=(~/.zsh-completions/src $fpath)
 eval "$(grunt --completion=zsh)"
 
 
-#HISTFILE=~/.bash_history
+
+
+
+# #HISTFILE=~/.bash_history
 HISTSIZE=200000
 SAVEHIST=100000
-#HIST_EXPIRE_DUPS_FIRST
-#HIST_FIND_NO_DUPS
-#HIST_IGNORE_DUPS
-#HIST_IGNORE_ALL_DUPS
-setopt incappendhistory
-setopt sharehistory
-setopt extendedhistory
-setopt auto_cd
+# HIST_EXPIRE_DUPS_FIRST
+# HIST_FIND_NO_DUPS
+# HIST_IGNORE_DUPS
+# HIST_IGNORE_ALL_DUPS
+# setopt incappendhistory
+# setopt sharehistory
+# setopt extendedhistory
+# setopt auto_cd
 REPORTTIME=10
 
 
-# Aliases Juankarlo
+# # Aliases Juankarlo
 alias c="clear"
 alias re=". ~/.zshrc; clear"
 alias e='exit'
 alias h='history'
-alias hg='h | grep'
+alias hgr='h | grep'
 alias ag='alias | grep'
 alias backgems="gem list|sed 's/(//'|sed 's/)//'|awk '{print \"gem install \" \$1}' > installGems.sh"
 
@@ -178,3 +196,5 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
 
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
