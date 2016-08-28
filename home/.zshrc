@@ -67,6 +67,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # User configuration
+# Path for Java
 
 export PATH=/usr/local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
@@ -123,6 +124,8 @@ REPORTTIME=10
 
 
 # # Aliases Juankarlo
+
+alias mamp_mysql='/Applications/MAMP/Library/bin/mysql'
 alias c="clear"
 alias re=". ~/.zshrc; clear"
 alias e='exit'
