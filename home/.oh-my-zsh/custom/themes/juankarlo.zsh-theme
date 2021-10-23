@@ -27,8 +27,8 @@
 # PROMPT='%{$fg[magenta]%}[%c] %{$reset_color%}'
 # PROMPT='☠ %{$fg[magenta]%}  (%c) ➜ % %{$reset_color%}'
 PROMPT='%{$fg_bold[magenta]%}[♦️ %{$fg[red]%}$(rvm-prompt i v g)%{$reset_color%}%{$fg_bold[magenta]%}] %{$fg_bold[red]%}[🐍 %{$fg[green]%}$(pyenv_prompt_info)%{$reset_color%}%{$fg_bold[red]%}] %{$reset_color%}%{$fg_bold[magenta]%}[%{$reset_color%}%{$fg_bold[cyan]%}%{%c%}%{$fg_bold[magenta]%}] %{$reset_color%} %{ $fg[yellow]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%} 
-%{$fg_bold[yellow]%} ☣  %{$reset_color%}'
-# ☠☢
+%{$fg_bold[yellow]%} ☢ %{$reset_color%}'
+# ☢ ☣ ☠
 # The right-hand prompt
 # RPROMPT='${time}'
 # RPROMPT='${time} %{$fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%}'

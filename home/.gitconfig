@@ -1,5 +1,5 @@
 [user]
-	name = Juan C. Nieves
+	name = Juan C Nieves Rodriguez
 	email = juanc.nieves@gmail.com
 	username = juankarlo	
 [credential]
@@ -39,7 +39,7 @@
 [branch]
   autosetuprebase = always
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/juankarlo/.gitignore_global
 	editor = subl
 	pager = less -+S
 [merge]
@@ -50,8 +50,9 @@
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 [push]
 	default = matching
@@ -59,5 +60,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/juankarlo/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/juankarlo/.stCommitMsg

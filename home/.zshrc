@@ -6,8 +6,8 @@ ZSH=$HOME/.oh-my-zsh
 #Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="random"
 ZSH_THEME="juankarlo"
-
 
 BULLETTRAIN_RUBY_SHOW="true"
 
@@ -30,7 +30,7 @@ BULLETTRAIN_TIME_SHOW="false"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=5
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -57,7 +57,7 @@ BULLETTRAIN_TIME_SHOW="false"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=( coffee colorize common-aliases cp extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm nyan perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin taskwarior terminator themes thor  wd web-search zeus osx encode64 gas nanoc virtualenv pyenv python
+plugins=( coffee colorize common-aliases cp extract git git-extras git-flow git-flow-avh git-hubflow gitfast gitignore heroku history lol node npm nvm perl pip postgres profiles rails rand-quote rbfu redis-cli rsync ruby rvm screen sprunge sudo systemadmin themes thor  wd web-search zeus osx encode64 gas nanoc virtualenv pyenv python
 )
 # tmux tmuxinator
 
@@ -66,15 +66,45 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-# User configuration
+# User configuration\
+	# OpenJDK
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 # Path for Java
+# List Java versions installed
+#/usr/libexec/java_home -V
 
-export PATH=/usr/local/bin:$PATH
+# Java 15.0.1
+#export JAVA_HOME=$(/usr/libexec/java_home -v 15.0.1)
+
+# Java 14.0.2
+#export JAVA_HOME=$(/usr/libexec/java_home -v 14.0.2)
+
+# Java 11
+#export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
+# Java 1.8
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Path for pyenv
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+# export PATH=/usr/local/bin:$PATH
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+#
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# eval "$(pyenv init -)"
 
+# export LDFLAGS="-L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="-I/usr/local/opt/zlib/include"
+# export LDFLAGS="-L/usr/local/opt/bzip2/lib"
+# export CPPFLAGS="-I/usr/local/opt/bzip2/include"
 
 # Path for RVM and NVM
 
@@ -103,7 +133,7 @@ fpath=(~/.zsh-completions/src $fpath)
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-eval "$(grunt --completion=zsh)"
+#eval "$(grunt --completion=zsh)"
 
 
 
@@ -112,8 +142,8 @@ eval "$(grunt --completion=zsh)"
 # #HISTFILE=~/.bash_history
 HISTSIZE=200000
 SAVEHIST=100000
-# HIST_EXPIRE_DUPS_FIRST
-# HIST_FIND_NO_DUPS
+#HIST_EXPIRE_DUPS_FIRST
+#HIST_FIND_NO_DUPS
 # HIST_IGNORE_DUPS
 # HIST_IGNORE_ALL_DUPS
 # setopt incappendhistory
@@ -124,7 +154,8 @@ REPORTTIME=10
 
 
 # # Aliases Juankarlo
-
+alias fping='fping -gaq'
+alias udemy-dl='python /Users/juankarlo/udemy-dl/udemy-dl.py'
 alias mamp_mysql='/Applications/MAMP/Library/bin/mysql'
 alias c="clear"
 alias re=". ~/.zshrc; clear"
@@ -138,6 +169,8 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias tm='tmux'
+
+alias ipython='ptipython'
 
 # List direcory contents
 
@@ -202,3 +235,6 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 eval "$(pyenv init -)"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
